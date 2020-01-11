@@ -28,6 +28,8 @@ class Triangle
       return :isosceles
     elsif is_scalene?
       return :scalene
+    else
+      raise TriangleError
     end
 
   end
