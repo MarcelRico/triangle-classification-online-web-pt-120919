@@ -30,7 +30,9 @@ class Triangle
   
   def kind
     
-    
+    if inequality_violated?
+      raise TriangleError
+    end
     
     if is_equi?
       return :equilateral
