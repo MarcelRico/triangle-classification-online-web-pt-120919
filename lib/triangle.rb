@@ -20,16 +20,24 @@ class Triangle
     (@side1 == @side2) && (@side2 == @side3) && (@side1 == @side3)
   end
   
+  def inequality_violated?
+    test1 = @side1 + @side2 > @side3
+    test2 = @side2 + @side3 > @side1
+    test3 = @side3 + @side1 > @side2
+    !(test1 && test2 && test3)
+  end
+  
+  
   def kind
-        
+    
+    
+    
     if is_equi?
       return :equilateral
     elsif is_iso?
       return :isosceles
     elsif is_scalene?
       return :scalene
-    else
-      raise TriangleError
     end
 
   end
