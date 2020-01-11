@@ -22,14 +22,7 @@ class Triangle
   
   def kind
     
-    
-    if is_equi?
-      return :equilateral
-    elsif is_iso?
-      return :isosceles
-    elsif is_scalene?
-      return :scalene
-    end
+
   
   class TriangleError < StandardError
   end
